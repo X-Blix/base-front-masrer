@@ -113,23 +113,4 @@ export function resetRouter() {
   router.matcher = newRouter.matcher // reset router
 }
 
-//拼装动态路由
-const manageRoute = {
-  path: '/',
-  name: 'Manage',
-  component: () => import('../views/Manage.vue'),
-  redirect: "/home",
-  children: [
-    {
-      path: '/person',
-      name: '个人信息',
-      component: () => import('../views/Person.vue'),
-    },
-    {
-      path: '/password',
-      name: '修改密码',
-      component: () => import('../views/Password.vue'),
-    },
-  ]
-}
 export default router
